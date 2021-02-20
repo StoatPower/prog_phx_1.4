@@ -1,5 +1,8 @@
 use Mix.Config
 
+# Config hasing rounds for user passwords
+config :pbkdf2_elixir, :rounds, 1
+
 # Configure your database
 #
 # The MIX_TEST_PARTITION environment variable can be used

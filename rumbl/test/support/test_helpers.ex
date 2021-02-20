@@ -22,6 +22,8 @@ defmodule Rumbl.TestHelpers do
         description: "a description"
       })
 
-    {:ok, video} = Multimedia.create_video(user, attrs)  
+    {:ok, video} = Multimedia.create_video(user, attrs)
+
+    video
   end
 end
