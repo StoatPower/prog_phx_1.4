@@ -10,7 +10,8 @@ defmodule RumblWeb.Application do
       # Start the Telemetry supervisor
       RumblWeb.Telemetry,
       # Start the Endpoint (http/https)
-      RumblWeb.Endpoint
+      RumblWeb.Endpoint,
+      RumblWeb.Presence
       # Start a worker by calling: RumblWeb.Worker.start_link(arg)
       # {RumblWeb.Worker, arg}
     ]
