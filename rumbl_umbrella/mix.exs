@@ -24,7 +24,11 @@ defmodule Rumbl.Umbrella.MixProject do
   # Dependencies listed here are available only for this project
   # and cannot be accessed from applications inside the apps/ folder.
   defp deps do
-    []
+    [
+      {:ecto_sql, "~> 3.4"},
+      {:postgrex, ">= 0.0.0"},
+      {:pbkdf2_elixir, "~> 1.3"}
+    ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
