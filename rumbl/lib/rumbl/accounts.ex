@@ -5,9 +5,14 @@ defmodule Rumbl.Accounts do
 
   alias Rumbl.Repo
   alias Rumbl.Accounts.User
+  import Ecto.Query
 
   def list_users do
     Repo.all(User)
+  end
+
+  def list_users_with_ids(ids) do
+    Repo.all(from(u in User, where: u.id in ^ids))
   end
 
   def get_user(id) do
