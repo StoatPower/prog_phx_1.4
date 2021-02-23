@@ -22,7 +22,7 @@ config :rumbl_web, RumblWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "vRFeCJ5ykyLSx7wLBS7DzwdO680FD2nMfPgrme0VLjCzSvpu+X32ncS1AdOWnEBK",
   render_errors: [view: RumblWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Rumbl.PubSub,
+  pubsub_server: RumblWeb.PubSub,
   live_view: [signing_salt: "jpuv4lgn"]
 
 # Configures Elixir's Logger
