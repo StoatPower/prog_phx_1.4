@@ -8,6 +8,8 @@ defmodule InfoSys.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      InfoSys.Cache,
+      {Task.Supervisor, name: InfoSys.TaskSupervisor}
       # Starts a worker by calling: InfoSys.Worker.start_link(arg)
       # {InfoSys.Worker, arg}
     ]
