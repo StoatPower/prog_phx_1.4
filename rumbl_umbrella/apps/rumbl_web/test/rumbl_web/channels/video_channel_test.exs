@@ -8,6 +8,8 @@ defmodule RumblWeb.Channels.VideoChannelTest do
     token = Phoenix.Token.sign(@endpoint, "user socket", user.id)
     {:ok, socket} = connect(RumblWeb.UserSocket, %{"token" => token})
 
+    # https://github.com/phoenixframework/phoenix/issues/3619
+    # still doesn't work tho
     on_exit(fn ->
       :timer.sleep(200)
       for pid <- RumblWeb.Presence.fetchers_pids()  do
